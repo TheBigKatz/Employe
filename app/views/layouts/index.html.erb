@@ -1,0 +1,22 @@
+<div>
+
+	<h1><center><strong><font color="white"><u> Employee Database</u></font></strong></center></h1>
+
+	<div class="row">
+		<% @employees.each do |employee| %>
+		<div class="col-md-5 col-md-offset-2">
+		  <div class="thumbnail">
+
+			<h3><%= link_to employee.name.to_s.upcase, "/employees/#{employee.id}" %></h3>
+			<h3><font color="white"><%= employee.price %></font></h3>
+			<img src="<%= employee.image %>" border="5" <img style="border:5 groove grey;"></h3>
+			<h3><font color="white"><%= employee.description %></font></h3>
+
+			<%= link_to "New", "/employees/new" %>
+			<%= link_to "Delete", "/employees/#{employee.id}", method: :delete %>
+			<%= link_to 'Edit', "/employees/#{employee.id}/edit" %>
+		  </div> <!-- thumbnail -->
+		</div> <!-- col-md-5 -->
+	</div> <!-- row -->
+	<% end %>
+</div>

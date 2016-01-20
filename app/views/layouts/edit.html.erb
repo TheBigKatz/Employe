@@ -1,0 +1,27 @@
+<h1><font color="black"> Update Your Employee Info: </font></h1>
+
+<%= form_tag "/employees/#{@employee.id}", method: :patch do %>
+
+	<div><font color="#5333F7">
+	  <%= label_tag :first_name %>
+	  <%= text_field_tag :first_name, @employee.first_name %>
+	</font></div>
+
+	<div><font color="#5333F7">
+	  <%= label_tag :last_name %>
+	  <%= text_field_tag :last_name, @employee.last_name %>
+	</font></div>
+
+	<div><font color="#5333F7">
+	  <%= label_tag :job_title %>
+	  <%= text_field_tag :job_title, @employee.job_title %>
+	</font></div>
+
+	<div><font color="#5333F7">
+	  <%= label_tag :phone_number %>
+	  <%= text_field_tag :phone_number, @employee.phone_number %>
+	</font></div>
+
+	<%= submit_tag "Update This Info" %>
+
+	<% end %>

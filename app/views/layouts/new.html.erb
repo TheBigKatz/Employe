@@ -1,0 +1,24 @@
+<font color="white"><h1>Add A New Employee:</h1></font>
+
+<%= form_tag '/employees', method: :post do %>
+	<div> 
+	<font color="#5333F7"><%= label_tag :first_name %></font>
+	<font color="#5333F7"><%= text_field_tag :first_name %></font>
+	 </div>
+
+	 <div> 
+	<font color="#5333F7"><%= label_tag :last_name %></font>
+	<font color="#5333F7"><%= text_field_tag :last_name %></font>
+	 </div>
+	 <div> 
+	<font color="#5333F7"><%= label_tag :job_title %></font>
+	<font color="#5333F7"><%= text_field_tag :job_title %></font>
+	 </div>
+	 <div> 
+	<font color="#5333F7"><%= label_tag :phone_number %></font>
+	<font color="#5333F7"><%= text_field_tag :phone_number %></font>
+	 </div>
+
+	 <%= submit_tag "Add It!" %>
+
+	 <% end %>
