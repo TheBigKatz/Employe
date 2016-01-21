@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
 
 	def index
-		@employee = Employee.all
+		@employees = Employee.all
 end
 
 	def show
@@ -14,6 +14,7 @@ end
 
 	def create
 				@employee = Employee.create({first_name: params[:first_name],
+										middle_name: params[:middle_name],
 										last_name: params[:last_name],
 										job_title: params[:job_title],
 										phone_number: params[:phone_number]})
